@@ -2,10 +2,11 @@
 ## Overview
 This project implements a hybrid optimization approach combining Artificial Neural Networks (ANN) for fitness function approximation with Genetic Algorithms (GA) for finding local optima. The method leverages the prediction capabilities of neural networks while using evolutionary search to explore the solution space effectively.
 
-
-usage
-python generic_NN_GA.py
-
+## Features
+- Three-layer Multilayer Perceptron (MLP) for function approximation
+- Genetic Algorithm optimization with customizable parameters
+- Feature importance analysis
+- Visualization of search progress and results
 
 Three layer MLP:
 
