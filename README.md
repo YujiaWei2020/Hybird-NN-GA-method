@@ -3,4 +3,4 @@ Apply artifical neural network for fitness funtion approximation and use genetic
 
 
 
-<img width="424" alt="image" src="https://github.com/user-attachments/assets/d5f6a639-950a-4077-b392-7dc6bd4d35dc">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/d5f6a639-950a-4077-b392-7dc6bd4d35dc">
