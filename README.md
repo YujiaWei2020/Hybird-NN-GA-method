@@ -1,4 +1,5 @@
 # Hybrid Neural Network - Genetic Algorithm Optimization
+
 ## Overview
 This project implements a hybrid optimization approach combining Artificial Neural Networks (ANN) for fitness function approximation with Genetic Algorithms (GA) for finding local optima. The method leverages the prediction capabilities of neural networks while using evolutionary search to explore the solution space effectively.
 
@@ -8,8 +9,11 @@ This project implements a hybrid optimization approach combining Artificial Neur
 - Feature importance analysis
 - Visualization of search progress and results
 
-Three layer MLP:
+## Architecture
 
+### Neural Network Structure
+The implementation uses a three-layer MLP with the following architecture:
+```python
 class Net(nn.Module):
     def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
         super(Net, self).__init__()
@@ -17,15 +21,55 @@ class Net(nn.Module):
         self.fc2 = nn.Linear(hidden_size1, hidden_size2)
         self.fc3 = nn.Linear(hidden_size2, output_size)
         self.relu = nn.ReLU()
-
+        
     def forward(self, x):
         x = self.relu(self.fc1(x))
         x = self.relu(self.fc2(x))
         output = self.fc3(x)
         return output
+```
 
-Optimization search:
-# Evolutionary algorithm
+### Genetic Algorithm Components
+- Selection: Tournament selection for choosing parent solutions
+- Crossover: Uniform crossover with 0.5 probability
+- Mutation: Gaussian mutation with 0.2 probability
+- Population replacement: Generational replacement strategy
+
+## Usage
+
+### Installation
+```bash
+git clone https://github.com/yourusername/hybrid-nn-ga.git
+cd hybrid-nn-ga
+pip install -r requirements.txt
+```
+
+### Running the Optimization
+```bash
+python generic_NN_GA.py
+```
+
+## Algorithm Flow
+1. Initialize population randomly
+2. Train neural network on initial samples
+3. For each generation:
+   - Select parents using tournament selection
+   - Apply crossover and mutation operators
+   - Evaluate offspring using trained neural network
+   - Update population
+   - Update hall of fame and statistics
+   - Record best solutions and population statistics
+
+## Implementation Details
+
+### Key Parameters
+- `NGEN`: Number of generations
+- Population size: Configurable based on problem complexity
+- Crossover rate: 0.5
+- Mutation rate: 0.2
+
+### Optimization Loop
+```python
 for gen in range(NGEN):
     # Select the next generation individuals
     offspring = toolbox.select(pop, len(pop))
@@ -52,11 +96,10 @@ for gen in range(NGEN):
     # Replace the old population with the offspring
     pop[:] = offspring
 
-    # Update the hall of fame and the statistics with the currently evaluated population
+    # Update the hall of fame and the statistics
     hof.update(pop)
     record = stats.compile(pop)
     logbook.record(evals=len(invalid_ind), gen=gen, **record)
-
     print(logbook.stream)
 
     # Save more data along the evolution for later plotting
@@ -65,16 +108,26 @@ for gen in range(NGEN):
     std[gen, :N] = np.std([ind for ind in pop], axis=0)
 
 print("Best individual is:", hof[0], hof[0].fitness.values)
+```
 
+## Results
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/d5f6a639-950a-4077-b392-7dc6bd4d35dc">
+### Search Progress
+The algorithm provides visualizations of convergence plots, population diversity, and best solution evolution.
 
-Feature importance analysis
-<img width="296" alt="image" src="https://github.com/user-attachments/assets/d4588475-5c24-4e8e-a251-444cbc76f598">
+### Feature Importance
+The system includes feature importance analysis to identify key variables in the optimization process.
 
-Example of how searching work
-![AntColony](https://github.com/user-attachments/assets/6acf322f-1d27-4163-8ef0-620849d41c73)
+### Search Behavior
+The search pattern resembles ant colony optimization, exploring multiple paths to find optimal solutions.
 
+## Dependencies
+- PyTorch
+- DEAP
+- NumPy
+- Matplotlib
 
-Reference:
-https://commons.wikimedia.org/wiki/File:AntColony.gif#/media/File:AntColony.gif
+## References
+- Base ant colony visualization: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AntColony.gif)
+- DEAP framework documentation
+- PyTorch neural network documentation
