@@ -3,7 +3,7 @@
 ## Overview
 This project implements a hybrid optimization approach combining Artificial Neural Networks (ANN) for fitness function approximation with Genetic Algorithms (GA) for finding local optima. The method leverages the prediction capabilities of neural networks while using evolutionary search to explore the solution space effectively.
 
-<img width="424" alt="image" src="https://github.com/user-attachments/assets/12b43d5a-b3e8-44ab-b4d3-d2c1b5a6480c">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/12b43d5a-b3e8-44ab-b4d3-d2c1b5a6480c">
 
 
 ## Features
