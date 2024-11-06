@@ -23,3 +23,5 @@ class Net(nn.Module):
 Feature importance analysis
 <img width="296" alt="image" src="https://github.com/user-attachments/assets/d4588475-5c24-4e8e-a251-444cbc76f598">
 
+table 
+![AntColony](https://github.com/user-attachments/assets/6acf322f-1d27-4163-8ef0-620849d41c73)
