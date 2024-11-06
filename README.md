@@ -2,6 +2,7 @@
 Apply artifical neural network for fitness funtion approximation and use genetic algorithm to find the local optimal
 
 Three layer MLP
+
 class Net(nn.Module):
     def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
         super(Net, self).__init__()
