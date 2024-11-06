@@ -3,6 +3,9 @@
 ## Overview
 This project implements a hybrid optimization approach combining Artificial Neural Networks (ANN) for fitness function approximation with Genetic Algorithms (GA) for finding local optima. The method leverages the prediction capabilities of neural networks while using evolutionary search to explore the solution space effectively.
 
+<img width="424" alt="image" src="https://github.com/user-attachments/assets/12b43d5a-b3e8-44ab-b4d3-d2c1b5a6480c">
+
+
 ## Features
 - Three-layer Multilayer Perceptron (MLP) for function approximation
 - Genetic Algorithm optimization with customizable parameters
@@ -120,6 +123,8 @@ The system includes feature importance analysis to identify key variables in the
 
 ### Search Behavior
 The search pattern resembles ant colony optimization, exploring multiple paths to find optimal solutions.
+
+![AntColony](https://github.com/user-attachments/assets/6fffb934-de51-4747-9980-484855d3993c)
 
 ## Dependencies
 - PyTorch
