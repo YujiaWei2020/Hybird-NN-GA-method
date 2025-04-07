@@ -128,11 +128,11 @@ The search pattern resembles ant colony optimization, exploring multiple paths t
 
 
 ### Example optimized results
-![image](https://github.com/user-attachments/assets/181aa66e-c1e4-46be-a7dc-d030890aa17c)
-![image](https://github.com/user-attachments/assets/b4a23640-4011-4d06-b81e-0b1a21b2ca7d)
-![image](https://github.com/user-attachments/assets/598e82cc-316b-46e1-ad67-334282244c03)
-![image](https://github.com/user-attachments/assets/8ef4dc34-bc13-489d-96d6-b99675780fc0)
-![image](https://github.com/user-attachments/assets/ba3a874f-eba8-474b-94fd-a3c85f271411)
+<img src="https://github.com/user-attachments/assets/181aa66e-c1e4-46be-a7dc-d030890aa17c" width="400" alt="Image 1">
+<img src="https://github.com/user-attachments/assets/b4a23640-4011-4d06-b81e-0b1a21b2ca7d" width="400" alt="Image 2">
+<img src="https://github.com/user-attachments/assets/598e82cc-316b-46e1-ad67-334282244c03" width="400" alt="Image 3">
+<img src="https://github.com/user-attachments/assets/8ef4dc34-bc13-489d-96d6-b99675780fc0" width="400" alt="Image 4">
+<img src="https://github.com/user-attachments/assets/ba3a874f-eba8-474b-94fd-a3c85f271411" width="400" alt="Image 5">
 
 
 
